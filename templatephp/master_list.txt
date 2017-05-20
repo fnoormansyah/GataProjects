@@ -1,0 +1,46 @@
+<<javascriptheader>>
+<h1><<table>></h1>
+<div id="header_list">
+</div>
+<table width="95%" >
+    <tr>
+        <td align="left">
+                    <<First>>
+                    <<Previous>>
+                     Page <?php echo $pageactive ?> / <?php echo $pagecount ?> 
+                    <<Next>>
+                    <<Last>>
+                    <a href="index.php?model=<<table>>&action=export&search=<?php echo $search ?>">Export</a>
+                    <a href="index.php?model=<<table>>&action=printdata&search=<?php echo $search ?>" target="_"><img src="./images/icon_print.png"/></a>
+        </td>
+        <td align="right">
+<<FormSearch>>
+        </td>
+    </tr>
+</table>
+<table border="1"  cellpadding="2" style="border-collapse: collapse;" width="95%">
+    <tr>
+<<HeaderTable>>
+    </tr>
+    <?php
+    
+    $no = 1;
+    
+    if ($<<table>>_list != "") { 
+        foreach($<<table>>_list as $<<table>>){
+            $pi = $no + 1;
+            $bg = ($pi%2 != 0) ? "#E1EDF4" : "#F0F0F0";
+    ?>
+            <tr bgcolor="<?php echo $bg;?>">
+  <<DetailTable>>
+                <td align="center" class="combobox">
+  <<ahref>>
+                </td>
+            </tr>
+    <?php
+            $no++;
+        }
+    }
+    ?>
+</table>
+<br>

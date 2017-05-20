@@ -1,0 +1,46 @@
+html { height: 100%; }
+
+
+
+/* Horizontal Scroller */
+#horizontal_carousel {
+	width: 400px;
+	height: 96px;
+	margin-top: 20px;
+	position: relative;
+	clear:both;
+}
+#horizontal_carousel .container {
+	overflow: hidden;
+	position: absolute ! important;
+	left: 57px ! important;
+	background-color: #FFFFFF;
+	top: -6px;
+}
+#horizontal_carousel .previous_button {
+	position: absolute;
+	width: 25px;
+	height: 96px;
+	z-index: 100;
+	cursor: pointer;
+	background-position:center center;
+	background-image: url(../../images/icon-arrow-prev.gif);
+	background-repeat: no-repeat;
+	margin-top:-30px;
+	margin-left:10px;
+	margin-right:10px;
+}
+#horizontal_carousel .previous_button.disabled { background: url(../../images/arrow-to-prev.gif) no-repeat; cursor: default; background-position:center center;}
+#horizontal_carousel .next_button {
+	position: absolute;
+	right: -53.25pt;
+	width: 25px;
+	height: 96px;
+	z-index: 100;
+	cursor: pointer;
+	background-position:center center;
+	background-image: url(../../images/icon-arrow-next.gif);
+	background-repeat: no-repeat;
+	margin-top:-30px;
+	margin-right:10px;
+}

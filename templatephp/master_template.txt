@@ -1,0 +1,9 @@
+<?php
+    class <<table>>
+    {
+<<Variables>>
+        var $primarykey = "<<primarykey>>";
+        
+<<SetGet>>         
+    }
+?>

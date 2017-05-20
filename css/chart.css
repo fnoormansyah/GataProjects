@@ -1,0 +1,406 @@
+@charset "UTF-8";
+/* CSS Document */
+
+body {
+  font-family: "Open Sans", Arial;
+  
+}
+main {
+  width: auto;
+  margin: 30px auto;
+}
+section {
+  margin-top: 0px;
+  padding-left:10px;
+}
+.pieID {
+  display: inline-block;
+  vertical-align: top;
+}
+.pie {
+  height: 200px;
+  width: 200px;
+  position: relative;
+  margin: 0 30px 0px 0;
+}
+.pie::before {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: 1;
+  width: 100px;
+  height: 100px;
+  background: #EEE;
+  border-radius: 50%;
+  top: 50px;
+  left: 50px;
+}
+.pie::after {
+  content: "";
+  display: block;
+  width: 120px;
+  height: 0px;
+  background: rgba(0,0,0,0.1);
+  border-radius: 50%;
+  box-shadow: 0 0 3px 4px rgba(0,0,0,0.1);
+  margin: 220px auto;
+  
+}
+.slice {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  clip: rect(0px, 200px, 200px, 100px);
+  animation: bake-pie 1s;
+}
+.slice span {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: black;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  clip: rect(0px, 200px, 200px, 100px);
+}
+.legend {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  background: #FFF;
+  padding: 15px;
+  font-size: 13px;
+  box-shadow: 1px 1px 0 #DDD,
+              2px 2px 0 #BBB;
+}
+.legend li {
+  width: 150px;
+  height: 1.25em;
+  margin-bottom: 0.7em;
+  padding-left: 0.5em;
+  border-left: 1.25em solid black;
+}
+.legend em {
+  font-style: normal;
+}
+.legend span {
+  float: right;
+}
+footer {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  font-size: 13px;
+  background: #DDD;
+  padding: 5px 10px;
+  margin: 5px;
+}
+
+
+
+/* CHART BAR  3D */
+
+* { margin: 0; padding: 0;}
+
+
+
+.full { max-width: 700px; position: relative; margin: 0 auto;}
+
+.main-title { 
+    position: absolute;
+    border-left: solid 5px #333;
+    padding-left: 10px;
+    color: #333;
+    margin: 0 20px 20px 20px;
+    font-family: Impact, serif;
+    font-weight: normal;
+    text-transform: uppercase;
+    line-height: 1;
+    top: 0;
+}
+
+.main-title span { display: block;}
+.main-title a { 
+    color: inherit;}
+
+.main-title span { margin-bottom: 0;}
+.main-title .span1 { font-size: 29px;}
+.main-title .span2 { font-size: 45px;}
+.main-title .span3 { font-size: 11px; font-family: Verdana, Arial, Helvetica, sans-serif; text-transform: none; font-weight: normal;}
+
+figure { margin: 0;}
+
+.container {
+    width: 500px;
+    height: 300px;
+    position: relative;
+    margin: 50px auto;
+    -webkit-perspective: 4000px;
+    -webkit-transform-style: preserve-3d;
+    
+    -moz-perspective: 4000px;
+    -moz-transform-style: preserve-3d;
+    
+    -webkit-animation: rotateChart 20s linear; 
+    -webkit-animation-fill-mode: forwards;
+    
+    -moz-animation: rotateChart 20s linear; 
+    -moz-animation-fill-mode: forwards;
+}
+
+@-moz-keyframes rotateChart/* Safari and Chrome */
+{
+0% {
+    -moz-transform: rotateX(0deg) rotateY(-20deg);
+    }  
+    
+100% {
+    -moz-transform: rotateX(0deg) rotateY(-380deg);
+    }
+}
+
+@-webkit-keyframes rotateChart/* Safari and Chrome */
+{
+0% {
+    -webkit-transform: rotateX(0deg) rotateY(-20deg);
+    }  
+    
+100% {
+    -webkit-transform: rotateX(0deg) rotateY(-380deg);
+    }
+}
+
+.persp1, .persp2, .persp3, .persp4, .persp5 {
+    position: absolute;
+    width: 100px;
+    bottom:0;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    z-index: 99;
+
+}
+
+.persp1 { height: 70%;}
+.persp2 { height: 50%;}
+.persp3 { height: 35%;}
+.persp4 { height: 30%;}
+.persp5 { height: 17%;}
+
+.face {
+    position: absolute;
+}
+
+.data-y {
+    background: none!important;
+    font-size: 22px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: #FFF;
+    text-align: center;
+    text-shadow: 1px 1px #666;
+    -webkit-transform: translateZ(1px);
+    -moz-transform: translateZ(1px);
+}
+
+.data-x {
+    background-image: url(http://www.heloisabiagi.com/media/charts01-social.png); 
+    background-repeat:no-repeat; 
+    background-color:#FFF!important;
+    -webkit-transform-origin: top left;
+    -webkit-transform: rotateX(90deg);
+    -moz-transform-origin: top left;
+    -moz-transform: rotateX(90deg);
+    top: 100%;
+}
+
+.persp1 .data-x { background-position: 0px 10px; }
+.persp2 .data-x { background-position: 0px -90px; }
+.persp3 .data-x { background-position: 0px -190px; }
+.persp4 .data-x { background-position: 0px -290px; }
+.persp5 .data-x { background-position: 0px -390px; }
+
+.persp1 { margin-left: 370px;}
+.persp2 { margin-left: 290px;}
+.persp3 { margin-left: 210px;}
+.persp4 { margin-left: 130px;}
+.persp5 { margin-left: 50px;}
+
+/* Faces */
+
+.front, .left, .right, .back {
+    width: 50px;
+    height: 100%;
+}
+
+.top, .data-x, .data-y {
+    width: 50px;
+    height: 50px;
+}
+
+.persp1 .face {
+      background-color: #3B5998;
+}
+
+
+.persp2 .face {
+    background-color: #20ACFF;
+}
+
+
+.persp3 .face {
+    background-color: #C53727;
+}
+
+.persp4 .face {
+    background-color: #4393BB;
+}
+
+.persp5 .face {
+    background-color: #DD4B5D;
+}
+
+
+/* Faces default*/
+
+.front {
+    opacity: 0.7;
+}
+
+.left {
+    -webkit-transform: rotateY(90deg);
+    -webkit-transform-origin: top left;
+    -moz-transform: rotateY(90deg);
+    -moz-transform-origin: top left;
+    opacity: 0.7;
+}
+
+
+
+.right {
+    -webkit-transform: rotateY(-90deg);
+    -webkit-transform-origin: top right;
+    background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgba(0,0,0,0.5)), to(transparent));
+    background-image: -moz-linear-gradient(-90deg, rgba(0,0,0,0.5), transparent);
+    -moz-transform: rotateY(-90deg);
+    -moz-transform-origin: top right;
+
+}
+
+
+.top {
+    -webkit-transform-origin:top left;
+    -webkit-transform: rotateX(90deg) translateY(-50px);
+    background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgba(255,255,255,0.3)), to(rgba(255,255,255,0.5)));
+    
+    -moz-transform-origin:top left;
+    -moz-transform: rotateX(90deg) translateY(-50px);
+    background-image: -moz-linear-gradient(90deg, rgba(255,255,255,0.3), rgba(255,255,255,0.5));
+    z-index: 99;
+}
+
+.back {
+    -webkit-transform: translateZ(-50px);
+    -moz-transform: translateZ(-50px);
+}
+
+.base {
+    background-color: #FFF;
+    -webkit-transform: rotateX(90deg) translateZ(100px);
+    -moz-transform: rotateX(90deg) translateZ(100px);
+    width: 100%;
+    height: 200px;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    border-bottom: solid 3px #CCC;
+    border-right: solid 3px #CCC;   
+    }
+
+.bars { height: 100%;}
+
+.subtitle { position: relative; margin: 0 auto; width: 510px;}
+
+.list-social li {
+    font-family: Arial, sans-serif; 
+    list-style: none; 
+    float: left; 
+    margin-right: 10px;
+}
+
+.list-social li:before {
+    content: '';
+    display: block;
+    float: left;
+    width: 20px;
+    height: 20px;
+    background-color: #F0F;
+    border-radius: 4px;
+    margin-right: 5px;
+}
+
+.list-social li.fb:before { background-color: #3B5998;}
+.list-social li.twt:before { background-color: #20ACFF;}
+.list-social li.gp:before { background-color: #C53727;}
+.list-social li.lkd:before { background-color: #4393BB;}
+.list-social li.pin:before { background-color: #DD4B5D;}
+
+
+/* CHART BAR */
+
+#contenitore{
+position: relative;
+width: 800px;
+margin: 20px auto;
+overflow:hidden;
+font: 14px 'Trebuchet MS', sans serif;
+}
+.left{
+float:left;
+width:48%;
+}
+#grafico{
+position:relative;
+height:300px;
+border-left:2px solid #000000;
+border-bottom: 2px solid #000000;
+width:100%;
+margin-top:20px;
+}
+.riga{
+position:absolute;
+left:0;
+height: 1px;
+background-color:gray;
+width: 100%;
+}
+.riga div{
+float:left;
+margin: -8px 0 0 -40px;
+}
+.canc{
+clear:both;
+}
+
+.column{
+position:absolute;
+width: 16%;
+bottom: 0;
+background-color: #003366;
+margin-left:5%;
+}
+div.button {
+    margin: 0 auto;
+    text-align: center;
+    width: 100px;
+    background-color:#003366;
+    border: 1px solid #003366;
+    border-radius: 5px;
+    padding: 8px;
+    color: #E1E2CF;
+    cursor: pointer;
+}
+.column div{
+margin-top:-20px;
+height:20px;
+}
+

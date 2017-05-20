@@ -1,0 +1,33 @@
+@charset "UTF-8";
+/* CSS Document */
+.PreviewBox {
+	width: auto;
+	padding: 10px;
+	height:600px;
+/*	border: 1px solid #D8D8D8;*/
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #333;
+	text-decoration: none;
+	overflow: scroll;
+	}	
+.titlePreview {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	font-weight: bold;
+	color: #333;
+	}
+.titlePreview2 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 18px;
+	font-weight: bold;
+	color: #5D1207;
+	}	
+.subtitlePreview {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 24px;
+	font-weight: bold;
+	color: #333;	
+	}	
+
+

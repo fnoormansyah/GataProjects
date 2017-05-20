@@ -1,0 +1,81 @@
+/*
+Author: W3layout
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+*/
+/* reset */
+
+.wrap{
+	margin:0 auto;
+	width:92%;
+	margin-bottom:-15px;
+	padding-top:15px;
+}
+/**********services***********/
+.Recent-wroks { 
+	margin: 4% 0;
+	text-align:center;
+	
+}
+
+.Recent-wrok h6{
+	width: 60%;
+	margin: 0 auto;
+	font-size: 1.1em;
+	color: #292929;
+	line-height: 1.5em;
+}
+
+span.rollover {
+	-o-transition-duration: 1s;
+	-moz-transition-duration: 1s;
+	-webkit-transition: -webkit-transform 1s;
+	cursor: pointer;
+	height: 250px;
+	width: 250px;
+	display:block;
+	position: absolute;
+	z-index: 10;
+	opacity: 0;
+	border-radius: 150px;
+	-webkit-border-radius: 150px;
+	-o-border-radius: 150px;
+	-moz-border-radius: 150px;
+	-webkit-transition: all 0.3s ease-out;
+	-moz-transition: all 0.3s ease-out;
+	-ms-transition: all 0.3s ease-out;
+	-o-transition: all 0.3s ease-out;
+	transition: all 0.3s ease-out;
+}
+span.rollover:hover {
+	opacity: 0.7;
+	-webkit-transition: all 0.3s ease-out;
+	-moz-transition: all 0.3s ease-out;
+	-ms-transition: all 0.3s ease-out;
+	-o-transition: all 0.3s ease-out;
+	transition: all 0.3s ease-out;
+}
+span.rollover1 {
+	-o-transition-duration: 1s;
+	-moz-transition-duration: 1s;
+	-webkit-transition: -webkit-transform 1s;
+	cursor: pointer;
+	height: 244px;
+	width: 387px;
+	display:block;
+	position: absolute;
+	z-index: 10;
+	opacity: 0;
+}
+span.rollover1:hover {
+	opacity: 0.7;
+	-webkit-transition: all 0.3s ease-out;
+	-moz-transition: all 0.3s ease-out;
+	-ms-transition: all 0.3s ease-out;
+	-o-transition: all 0.3s ease-out;
+	transition: all 0.3s ease-out;
+}
+
+}
+/*****  //Media Quries for 320px tabs *****/
